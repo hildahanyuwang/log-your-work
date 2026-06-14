@@ -12,6 +12,18 @@ GitHub can give you a commit history. Linear can give you ticket status. Neither
 
 ---
 
+## Quickstart (30 seconds)
+
+1. **Install:** `unzip ai-worklog.skill -d .claude/skills/` then restart Claude Code (or upload `ai-worklog.skill` in Claude desktop/web → Settings → Skills).
+2. **Turn it on for the session** — say once:
+   > Auto-emit a worklog card after each substantive change and append it to WORKLOG.md. No need to prompt me each time.
+3. **Work as normal.** After each real change, a card lands in `WORKLOG.md`.
+4. **Before a standup:** say `give me a standup`, or pull a slice with `node scripts/worklog.mjs --since 2026-06-08`.
+
+Cards come out in the language you're working in. Everything below is detail.
+
+---
+
 ## What you get
 
 After each substantive task (feature built, bug fixed, decision made), the AI outputs a card with a machine-readable header and a human-readable body.

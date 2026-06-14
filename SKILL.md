@@ -133,6 +133,19 @@ Everything else (What, Why, Shortcuts, Risks, Next, frontmatter) is the same. Co
 
 ---
 
+## Output language
+
+Write the **card body in the language the user is working in**. If the conversation is in Chinese, the content of What / Why / Where / etc. is in Chinese; if it's in English, English. Match the user — don't default to English just because this doc is in English.
+
+Two things stay fixed regardless of language:
+
+- **The field labels** — `What`, `Why`, `Where`, `Verified`, `Shortcuts`, `Risks`, `Next`. Keep them in English.
+- **The frontmatter keys and their enum values** — `type: feature`, `status: shipped`, `mode: code`, etc. Keep these exact.
+
+These are structural, not prose: `scripts/worklog.mjs`, the standup rollup, and the commit helper all match on them, and consistent labels keep a mixed-language team's log greppable. Translating them silently breaks the tooling. Free-text frontmatter values (`component`, `tags`, `ref`) can be in any language, but keep each one spelled consistently across cards so filters still group them.
+
+---
+
 ## Hard rules
 
 **Honesty over polish.** A card that smooths over uncertainty gives false confidence in a meeting — that's worse than no card. If something is unknown, write "unknown." If something wasn't tested, say so explicitly.

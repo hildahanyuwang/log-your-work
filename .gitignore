@@ -1,0 +1,19 @@
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# node
+node_modules/
+npm-debug.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# local Claude Code settings
+.claude/settings.local.json
+
+# the live log + per-project decision records are the user's, not the skill's source
+WORKLOG.md
+logs/decision-records/
